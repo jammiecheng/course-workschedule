@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>已排班表</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}" type="text/css">
+</head>
+<body>
+    <h1>排班表</h1>
+    <section class="container">
+        <table id="tb">
+            <caption>班表</caption>
+            <thead>
+                <tr>
+                    <th>Mon.</th>
+                    <th>Tue.</th>
+                    <th>Wed.</th>
+                    <th>Thu.</th>
+                    <th>Fri.</th>
+                    <th>Sat.</th>
+                    <th>Sun.</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for time in time_week1%}               
+                <tr> 
+                    <td>{{time.week}}</td>
+                    <td>{{time.time}}</td>                   
+                    <td>{{time.stId.cName}}</td>
+                </tr>
+                {% endfor %}
+                {% for time in time_week2%}               
+                <tr> 
+                    <td>{{time.week}}</td>
+                    <td>{{time.time}}</td>                   
+                    <td>{{time.stId.cName}}</td>
+                </tr>
+                {% endfor %}
+                {% for time in time_week3%}               
+                <tr> 
+                    <td>{{time.week}}</td>
+                    <td>{{time.time}}</td>                   
+                    <td>{{time.stId.cName}}</td>
+                </tr>
+                {% endfor %}
+                {% for time in time_week4%}               
+                <tr> 
+                    <td>{{time.week}}</td>
+                    <td>{{time.time}}</td>                   
+                    <td>{{time.stId.cName}}</td>
+                </tr>
+                {% endfor %}
+                {% for time in time_week5%}               
+                <tr> 
+                    <td>{{time.week}}</td>
+                    <td>{{time.time}}</td>                   
+                    <td>{{time.stId.cName}}</td>
+                </tr>
+                {% endfor %}
+                {% for time in time_week6%}               
+                <tr> 
+                    <td>{{time.week}}</td>
+                    <td>{{time.time}}</td>                   
+                    <td>{{time.stId.cName}}</td>
+                </tr>
+                {% endfor %}
+                {% for time in time_week7%}               
+                <tr> 
+                    <td>{{time.week}}</td>
+                    <td>{{time.time}}</td>                   
+                    <td>{{time.stId.cName}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    </form>
+</body>
+</html>

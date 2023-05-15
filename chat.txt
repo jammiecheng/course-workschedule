@@ -1,0 +1,55 @@
+啟動伺服器:
+python manage.py runserver
+or
+python3 manage.py runserver
+
+網址加上/admin可以登入 
+我有註冊不知道你們可不可以
+帳號:admin
+密碼:a123456
+不行的話就打 python manage.py createsuperuser註冊
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+必須用到的部分:
+schedule/urls 網址&函示對照
+
+myapp/views 定義運用的函式
+
+templates 跟剛剛用的其實一樣 放網址那些 
+上面那些我有導向了
+
+static資料夾下面放的是圖片和css檔
+如果要插入圖片 應參考以下範例
+<img scr = "{% static "images/檔名.png" %}"
+
+建立資料庫:
+myapp/models.py
+定義class 一個class = 一個資料表
+class的變數 = 資料表欄位
+
+更新資料庫:
+python manage.py makemigrations
+python manage.py migrate
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+欄位設定自己慢慢看
+日期資料表
+星期
+時段
+員工編號(關聯員工資料表 一對多 如果刪掉員工資料 這筆紀錄也會被刪除)
+
+員工資料表
+員工姓名
+員工編號(自動編流水號)
+性別
+生日
+mail
+電話
+住址
+
+
+
+注意:runserver後，存檔後會自動變更資料窩屋窩喔窩><
+
+
+以下歡迎發問:
